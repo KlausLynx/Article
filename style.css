@@ -1,0 +1,265 @@
+@import url('https://fonts.google.com/specimen/Manrope');
+
+* {
+    box-sizing: border-box;
+    font-weight: 400, 700;
+    margin: 0;
+    padding: 0;
+    Font-size: 13px;
+    font-family: 'Manrope', 'Georgia', Geneva, 'Segoe UI', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    margin: auto;
+    overflow: hidden;
+}
+
+.cont {
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10rem auto 2rem auto;
+    width: 70vw;
+}
+
+.fig {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    display: block;
+    height: 65vh;
+    width: 35vw;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3rem;
+}
+
+.text h1 {
+    font-size: 24px;
+    font-size: large;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#links{
+    background-color: #21252c;
+    border-radius: 15px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    position: absolute;
+    right: -700px;
+}
+
+#links.active {
+    background-color: #21252c;
+    border-radius: 15px;
+    bottom: 65px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 1rem;
+    position: absolute;
+    right: -60px;
+}
+
+#links::before {
+    content: ' ';
+    position: absolute;
+    bottom: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    right: 70px;
+    border-top: 15px solid #21252c;
+}
+
+.link_text {
+    margin-right: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #ecf2f8;
+}
+
+.arrow {
+    background-color: #ecf2f8;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+#arrow.active {
+    background-color: #21252c;
+}
+
+.status {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.profile {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.profile img {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+}
+
+.profile div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1120px) {
+    body {
+        overflow: scroll;
+    }
+
+    .cont {
+        background-color: aqua;
+        display: grid;
+        margin: 32px;
+        width: 59.5vw;
+    }
+
+    .fig {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 50vh;
+        width: 60vw;
+    }
+
+    #links.active {
+        background-color: #48556a;
+        bottom: -39px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0px;
+        position: absolute;
+        left: -40px;
+        min-height: 95px;
+        width: 60vw;
+    }
+
+    #links.active::before {
+        content: ' ';
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+    }
+
+    #head.active {
+      justify-content: flex-end;
+    }
+
+    #status.active {
+        display: none;
+    }
+
+    #arrow.active {
+        z-index: 1;
+    }
+
+    .link_text {
+        font-size: 24px;
+        padding-left: 2rem;
+        letter-spacing: 5px;
+        color: #ecf2f8a2;
+    }
+
+    .facebook,
+    .pinterest,
+    .twitter {
+        width: 30px;
+    }
+
+    #links {
+        gap: 5px;
+    }
+
+    .text p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        overflow: scroll;
+    }
+
+    .cont {
+        width: 80vw;
+        background-color: crimson;
+    }
+
+    .fig {
+        width: 80.3vw; 
+    }
+
+    #links.active {
+        background-color: #48556a;
+        bottom: -14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 1rem;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0px;
+        position: absolute;
+        left: -12px;
+        min-height: 70px;
+        width: 80vw;
+    }
+
+    .link_text {
+        font-size: 16px;
+        padding-left: 0px;
+        letter-spacing: 2px;
+        color: #ecf2f8a2;
+    }
+
+    .facebook,
+    .pinterest,
+    .twitter {
+        width: 19px;
+    }
+
+    .text {
+        padding: 1rem;
+    }
+}
